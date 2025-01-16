@@ -42,3 +42,16 @@ const every1 = numbers.every((num) => num > 100);
 console.log("🚀 ~ every1:", every1);
 const some = numbers.some((num) => num > 45);
 console.log("🚀 ~ some:", some); //하나라도 조건을 만족하는지 판별
+
+let arr = [0, 0, 0, 1];
+let idx = 1;
+
+function solution(arr, idx) {
+  for (let i = idx; i < arr.length; i++) {
+    if (arr[i] === 1) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(solution(arr, idx));
